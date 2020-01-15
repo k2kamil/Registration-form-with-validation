@@ -2,23 +2,24 @@
 
 * {
     box-sizing: border-box;
-    margin: 0 10px;
+    margin: 0;
 }
 
 body {
     font-family: 'Roboto Slab', serif;
-    background-color: #474e59;
+    background-image: linear-gradient(-60deg, #babacc, #2f2f30);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: -20px 0 50px;
+    margin: 0 50px;
 }
 
 h1 {
+    font-size: 26px;
     font-weight: 800;
-    margin: 0;
+    margin: 15px 0;
 }
 
 p {
@@ -31,6 +32,7 @@ p {
 
 span {
     font-size: 12px;
+    margin: 5px;
 }
 
 a {
@@ -47,9 +49,9 @@ a {
 
     position: relative;
     overflow: hidden;
-    width: 768px;
+    width: 680px;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 420px;
 }
 
 .section form {
@@ -73,25 +75,27 @@ a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin: 0 5px;
-    height: 40px;
-    width: 40px;
+    margin: 0 15px;
+    height: 30px;
+    width: 30px;
 }
 
 form .pass-forgot {
-    font-size: 12px;
+    font-size: 8px;
     color: #b1b6bd;
-    margin-top: 0;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     padding-top: 0;
 }
 
 .section input {
+    border-radius: 10px;
     background: #eee;
     border: none;
-    padding: 12px 15px;
-    margin: 8px 0;
+    padding: 4px 8px;
+    margin: 6px 0;
     width: 100%;
+    font-size: 12px;
 }
 
 button {
@@ -99,10 +103,10 @@ button {
     border: 1px solid #6a0dad;
     background: #6a0dad;
     color: #fff;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 800;
-    padding: 12px 35px;
-    margin: 0;
+    padding: 8px 25px;
+    margin: 15px 0;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 90ms ease-in;
@@ -142,6 +146,7 @@ button:focus {
 }
 
 .over-container {
+    padding-left: 0;
     position: absolute;
     top: 0;
     left: 50%;
@@ -153,8 +158,9 @@ button:focus {
 }
 
 .over-layer {
+    margin: 0;
     background: #6a0dad;
-    background-image: linear-gradient(to right, #6a0dad, #4a0dad);
+    background-image: linear-gradient(-45deg, #6a0dad, #4a0dad);
     color: #fff;
     position: relative;
     left: -100%;
@@ -173,6 +179,11 @@ button:focus {
     align-items: center;
     padding: 0 40px;
     height: 100%;
+
+    width: 50%;
+    text-align: center;
+    transform: translateX(0);
+    transition: 0.6s ease-in-out;
 }
 
 .over-right {
@@ -181,20 +192,36 @@ button:focus {
 }
 
 .over-left {
-    transform: translateX(0);
+    transform: translateX(-20%);
     left: 0;
 }
 
 /* Animation */
+.container.right-panel-active .login-container {
+    transform: translateX(100%);
+}
 
+.container.right-panel-active .over-container {
+    transform: translateX(-100%);
+}
 
+.container.right-panel-active .registration-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
 
+.container.right-panel-active .over-layer {
+    transform: translateX(50%);
+}
 
+.container.right-panel-active .over-left {
+    transform: translateX(0%);
+}
 
-
-
-
-
+.container.right-panel-active .over-right {
+    transform: translateX(0%);
+}
 
 
 
