@@ -80,6 +80,15 @@ a {
     width: 30px;
 }
 
+
+
+.error-msg {
+    font-size: 10px;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+
 form .pass-forgot {
     font-size: 8px;
     color: #b1b6bd;

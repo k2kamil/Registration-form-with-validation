@@ -12,13 +12,15 @@
     <div class="container">
 
         <div class="section registration-container">
-            <form action="#">
+            <form action="#" id="form">
                 <h1>Create an Account</h1>
-                <input type="email" placeholder="Email">
-                <input type="username" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <input type="password" placeholder="Confirm Password">
-                <button>Confirm</button>
+                <input type="email" id="email" placeholder="Email">
+                <input type="username" id="username" placeholder="Username">
+                <input type="password" id="pass1" placeholder="Password">
+                <input type="password" id="pass2" placeholder="Confirm Password">
+                <input type="checkbox" id="agree"><span>I agree temrs and conditions</span>
+                <span class="error-msg"></span>
+                <input id="submit" type="submit">Confirm</input>
                 <span>Or Sign Up with</span>
                 <div class="social-icons">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -33,6 +35,7 @@
                 <h1>Log In</h1>
                 <input type="email" placeholder="Email">
                 <input type="password"  placeholder="Password">
+                <span class="error-msg"></span>
                 <a href="#" class="pass-forgot">Forgot your password?</a>
                 <button>Log In</button>
                 <span>or Log In with</span>
